@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.grocery_list.GroceryFragment">
+
+
+    <TextView
+        android:id="@+id/text_grocery_list"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="4dp"
+        android:text="Your Grocery List"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/pantry_view_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginBottom="56dp"
+        android:onClick="showPantry"
+        android:text="View Pantry"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/generate_groceries_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginBottom="4dp"
+        android:text="Generate Grocery List"
+        app:layout_constraintBottom_toTopOf="@+id/pantry_view_button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:text="You have no groceries. Generate a Meal Plan?"
+        app:layout_constraintStart_toStartOf="@+id/grocery_list_view"
+        app:layout_constraintTop_toTopOf="@+id/grocery_list_view" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/grocery_list_view"
+        android:layout_width="292dp"
+        android:layout_height="580dp"
+        app:layout_constraintBottom_toTopOf="@+id/pantry_view_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_grocery_list" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
